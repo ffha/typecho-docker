@@ -25,6 +25,8 @@ RUN apt-get update && apt-get install -y \
         pdo_pgsql \
         tokenizer \
         opcache 
+   RUN pecl install imagick
+   RUN docker-php-ext-enable imagick
    VOLUME /var/www/html
    WORKDIR /var/www/html
    EXPOSE 80
