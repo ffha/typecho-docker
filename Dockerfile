@@ -1,4 +1,5 @@
 FROM nginx:stable
+RUN apt-get update
 RUN apt-get install wget openssl curl
 RUN wget -O repo.sh https://packages.sury.org/php/README.txt
 RUN bash repo.sh
