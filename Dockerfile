@@ -10,5 +10,4 @@ RUN apt-get install php php-fpm php-mbstring php-mysql php-gd -y
 COPY src/ /usr/share/nginx/html
 COPY nginx.conf /etc/nginx/nginx.conf
 EXPOSE 80
-CMD php-fpm8.1
-CMD nginx
+CMD php-fpm8.1 && nginx
